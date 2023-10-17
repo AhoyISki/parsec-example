@@ -1,0 +1,26 @@
+[workspace]
+members = [
+  "application"
+]
+
+[package]
+name = "parsec"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+parsec-kak = { path = "../parsec-kak/", version = "*" }
+parsec-core = { path = "../parsec-core/", version = "*" }
+parsec-term = { path = "../parsec-term/", version = "*" }
+
+crossterm = "0.26.0"
+
+[features]
+wack = ["parsec-core/wacky-colors"]
+
+[lib]
+path = "src/config.rs"
+
+[[bin]]
+path = "application/src/main.rs"
+name = "parsec"
