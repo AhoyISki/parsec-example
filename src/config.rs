@@ -1,9 +1,16 @@
+// The prelude will contain the most common elements needed to make
+// Parsec work.
 use parsec_core::{prelude::*, widgets::StatusLineCfg};
+// In order to function, Parsec needs an `InputMethod` for files
+// (`parsek_kak::Editor`) and a `Ui` (`parsec_term::Ui`).
 use parsec_kak::Editor;
 use parsec_term::{Ui, VertRule};
 
+// This function is where every option surrounding Parsec must be
+// defined. Of course, you can call other functions from it, but
+// unless it ends up in this function, Parsec will not run it.
 pub fn config() -> SessionCfg<Ui, Editor> {
-    palette::set_main_cursor(CursorStyle::new(None, Form::new().on_cyan()));
+    palette::set_main_cursor(Form::new().on_cyan(), None);
 
     let print_cfg = PrintCfg::new()
         .with_scrolloff(5)

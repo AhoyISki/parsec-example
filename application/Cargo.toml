@@ -9,4 +9,4 @@ edition = "2021"
 parsec-kak = { path = "../../parsec-kak/", version = "*" }
 parsec-core = { path = "../../parsec-core/", version = "*" }
 parsec-term = { path = "../../parsec-term/", version = "*" }
-parsec = { path = "../../testing" }
+parsec = { path = "../" }

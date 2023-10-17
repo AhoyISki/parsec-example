@@ -7,6 +7,14 @@ members = [
 name = "parsec"
 version = "0.1.0"
 edition = "2021"
+# PLEASE DO NOT PUBLISH THIS CONFIGURATION TO A CARGO REGISTRY
+# LIKE CRATES.IO OR LIBS.RS.
+#
+# This is important in order to keep these sites from being flooded
+# with configuration crates for Parsec, which probably isn't desirable.
+# If you want to keep them online somewhere, try websites like github,
+# gitlab, codeberg, etc.
+publish = false
 
 [dependencies]
 parsec-kak = { path = "../parsec-kak/", version = "*" }
